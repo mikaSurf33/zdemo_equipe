@@ -1,0 +1,75 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZGW_PO_SRV" xml:lang="fr" sap:schema-version="1">
+			<EntityType Name="PoHeader" sap:content-version="1">
+				<Key><PropertyRef Name="Ebeln"/></Key><Property Name="Waers" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Devise" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Netwr" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Montant net"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="SupplName" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Nom du fournisseur"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ebeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Document achat"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Société" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bstyp" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Catég. document"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bsart" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Type document" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Loekz" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Code suppress." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Statu" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Statut" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ernam" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Créé par" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Lifnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Fournisseur" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zterm" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Cond. paiemt" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ekorg" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Organis. achats"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ekgrp" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Grpe acheteurs" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ihrez" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Votre référence"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="HeadToItemNav" Relationship="ZGW_PO_SRV.HeadToItemAss" FromRole="FromRole_HeadToItemAss"
+					ToRole="ToRole_HeadToItemAss"/></EntityType>
+			<EntityType Name="PoItem" sap:content-version="1">
+				<Key><PropertyRef Name="Ebeln"/><PropertyRef Name="Ebelp"/></Key><Property Name="Ebeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Document achat"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ebelp" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Poste" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Loekz" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Code suppress." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Article" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Société" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Werks" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Division" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Lgort" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Empl. stockage" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matkl" Type="Edm.String" Nullable="false" MaxLength="9" sap:unicode="false" sap:label="Grpe marchand." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Idnlf" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Nº art. fourn."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Menge" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:unit="Meins"
+					sap:label="Qté commandée" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Meins" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Unité d'achat" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/><Property Name="Netpr" Type="Edm.Decimal" Nullable="false" Precision="12" Scale="3" sap:unicode="false" sap:label="Prix net"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Netwr" Type="Edm.Decimal" Nullable="false" Precision="14" Scale="3" sap:unicode="false" sap:label="Valeur nette"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Brgew" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Poids brut"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Inco1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Incoterms" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Inco2" Type="Edm.String" Nullable="false" MaxLength="28" sap:unicode="false" sap:label="Incoterms 2" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="ItemToCustomNav" Relationship="ZGW_PO_SRV.ItemToCustomAss" FromRole="FromRole_ItemToCustomAss"
+					ToRole="ToRole_ItemToCustomAss"/></EntityType>
+			<EntityType Name="zekkoekpo" sap:content-version="1">
+				<Key><PropertyRef Name="Ebeln"/><PropertyRef Name="Ebelp"/></Key><Property Name="Ebeln" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Document achat"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ebelp" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Poste" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Société" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bsart" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Type document" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Article" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Werks" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Division" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Meins" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Unité d'achat" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/><Property Name="Menge" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:unit="Meins"
+					sap:label="Qté commandée" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Loekz" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Code suppress." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<Association Name="ItemToCustomAss" sap:content-version="1"><End Type="ZGW_PO_SRV.PoItem" Multiplicity="1" Role="FromRole_ItemToCustomAss"/><End Type="ZGW_PO_SRV.zekkoekpo" Multiplicity="*" Role="ToRole_ItemToCustomAss"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_ItemToCustomAss"><PropertyRef Name="Ebeln"/><PropertyRef Name="Ebelp"/></Principal>
+					<Dependent Role="ToRole_ItemToCustomAss"><PropertyRef Name="Ebeln"/><PropertyRef Name="Ebelp"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="HeadToItemAss" sap:content-version="1"><End Type="ZGW_PO_SRV.PoHeader" Multiplicity="1" Role="FromRole_HeadToItemAss"/><End Type="ZGW_PO_SRV.PoItem" Multiplicity="*" Role="ToRole_HeadToItemAss"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_HeadToItemAss"><PropertyRef Name="Ebeln"/></Principal>
+					<Dependent Role="ToRole_HeadToItemAss"><PropertyRef Name="Ebeln"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="ZGW_PO_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="PoHeaderSet" EntityType="ZGW_PO_SRV.PoHeader" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="PoItemSet" EntityType="ZGW_PO_SRV.PoItem" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="zekkoekpoSet" EntityType="ZGW_PO_SRV.zekkoekpo" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/>
+				<AssociationSet Name="HeadToItemAssSet" Association="ZGW_PO_SRV.HeadToItemAss" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="PoHeaderSet" Role="FromRole_HeadToItemAss"/><End EntitySet="PoItemSet" Role="ToRole_HeadToItemAss"/></AssociationSet>
+				<AssociationSet Name="ItemToCustomAssSet" Association="ZGW_PO_SRV.ItemToCustomAss" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="PoItemSet" Role="FromRole_ItemToCustomAss"/><End EntitySet="zekkoekpoSet" Role="ToRole_ItemToCustomAss"/></AssociationSet>
+			</EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZGW_PO_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZGW_PO_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
