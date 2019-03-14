@@ -90,6 +90,7 @@ sap.ui.define([
 		onUpdateFinished : function (oEvent) {
 			// update the master list object counter after new data is loaded
 			this._updateListItemCount(oEvent.getParameter("total"));
+alert("bonne vacances");
 		},
 
 		/**
